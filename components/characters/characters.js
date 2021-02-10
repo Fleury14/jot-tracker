@@ -1,7 +1,8 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import characterInfo from '../../data/characters';
 import styles from './characters.module.css';
+import { TOGGLE_CHARACTER } from '../../redux/types';
 
 const getCharacterName = (key) => {
     if (!key) return '';
@@ -10,8 +11,15 @@ const getCharacterName = (key) => {
 
 const renderCharacters = (charState) => {
     const characterList = [];
+    const dispatch = useDispatch();
     for (const key in charState) {
-        characterList.push(<button className={charState[key] ? styles.hasCharacter : styles.noCharacter} key={key}>{getCharacterName(key)}</button>)
+        characterList.push(<button
+            className={charState[key] ? styles.hasCharacter : styles.noCharacter}
+            key={key}
+            onClick={() => dispatch({ type: TOGGLE_CHARACTER, payload: { character: key } })}
+        >
+            {getCharacterName(key)}
+        </button>)
     }
     return characterList;
 }
