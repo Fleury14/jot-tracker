@@ -37,9 +37,10 @@ const INITIAL_STATE = {
 };
 
 const locationReducer = (state = INITIAL_STATE, action) => {
+    console.log('toggling location', action);
     switch (action.type) {
         case TOGGLE_LOCATION:
-            if (!action.payload || action.payload.locstion) return state;
+            if (!action.payload || !action.payload.location) return state;
             const loc = action.payload.location;
             return { ...state, [loc]: !state[loc]}
         default:
