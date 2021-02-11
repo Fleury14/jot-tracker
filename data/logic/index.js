@@ -44,7 +44,7 @@ export const availableLocations = () => {
     if (hasTomasPop) available.push('giantsClaw');
 
     // prism trial
-    if (hasMasamune && hasPrismShard) available.push('prismTrial');
+    if (hasMarle && hasPrismShard) available.push('prismTrial');
 
     // pendant trial
     if (hasPendant) available.push('pendantTrial');
@@ -69,7 +69,7 @@ export const availableLocations = () => {
 
     // all prehistory unlocks require gatekey
     if (hasGateKey) {
-        available.push('reptiteLair, dactylNest');
+        available.push('reptiteLair', 'dactylNest');
 
         if(hasDreamstone) available.push('tyranoLair');
     }
