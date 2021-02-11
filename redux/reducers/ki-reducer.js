@@ -23,7 +23,7 @@ const INITIAL_STATE = {
 const kiReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case TOGGLE_KI:
-            if (!action.payload || action.payload.ki) return state;
+            if (!action.payload || !action.payload.ki) return state;
             const { ki } = action.payload;
             return { ...state, [ki]: !state[ki]}
         default:
