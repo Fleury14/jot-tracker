@@ -25,72 +25,84 @@ const Locations = (props) => {
     
 
     return availableWInfo && availableWInfo.length ? (
-        <>
+        <div>
             <h2>Locations</h2>
-            <div>
-                <h3>Prehistory</h3>
-                <div>
-                    {availableWInfo
-                    .filter(loc => loc.time === 'prehistory')
-                    .map(loc => <button
-                        key={loc.key}
-                        className={locationState[loc.key] ? styles.locationCleared : styles.locationOpen}
-                        onClick={() => dispatch({ type: TOGGLE_LOCATION, payload: { location: loc.key }})}
-                    >{loc.title}</button>)}
-                </div>    
-                <h3>Dark Ages</h3>
-                <div>
-                    {availableWInfo
-                    .filter(loc => loc.time === 'dark')
-                    .map(loc => <button
-                        key={loc.key}
-                        className={locationState[loc.key] ? styles.locationCleared : styles.locationOpen}
-                        onClick={() => dispatch({ type: TOGGLE_LOCATION, payload: { location: loc.key }})}
-                    >{loc.title}</button>)}
+            <div className={styles.locationContainer}>
+                <div className={styles.locationEra}>
+                    <h3>Middle Ages</h3>
+                    <div className={styles.locationButtonRow}>
+                        {availableWInfo
+                        .filter(loc => loc.time === '600')
+                        .map(loc => <button
+                            key={loc.key}
+                            className={locationState[loc.key] ? styles.locationCleared : styles.locationOpen}
+                            onClick={() => dispatch({ type: TOGGLE_LOCATION, payload: { location: loc.key }})}
+                        >{loc.title}</button>)}
+                    </div>
                 </div>
-                <h3>Middle Ages</h3>
-                <div>
-                    {availableWInfo
-                    .filter(loc => loc.time === '600')
-                    .map(loc => <button
-                        key={loc.key}
-                        className={locationState[loc.key] ? styles.locationCleared : styles.locationOpen}
-                        onClick={() => dispatch({ type: TOGGLE_LOCATION, payload: { location: loc.key }})}
-                    >{loc.title}</button>)}
+                <div className={styles.locationEra}>
+                    <h3>Present</h3>
+                    <div className={styles.locationButtonRow}>
+                        {availableWInfo
+                        .filter(loc => loc.time === '1000')
+                        .map(loc => <button
+                            key={loc.key}
+                            className={locationState[loc.key] ? styles.locationCleared : styles.locationOpen}
+                            onClick={() => dispatch({ type: TOGGLE_LOCATION, payload: { location: loc.key }})}
+                        >{loc.title}</button>)}
+                    </div>
                 </div>
-                <h3>Present</h3>
-                <div>
-                    {availableWInfo
-                    .filter(loc => loc.time === '1000')
-                    .map(loc => <button
-                        key={loc.key}
-                        className={locationState[loc.key] ? styles.locationCleared : styles.locationOpen}
-                        onClick={() => dispatch({ type: TOGGLE_LOCATION, payload: { location: loc.key }})}
-                    >{loc.title}</button>)}
+                <div className={styles.locationEra}>
+                    <h3>Prehistory</h3>
+                    <div className={styles.locationButtonRow}>
+                        {availableWInfo
+                        .filter(loc => loc.time === 'prehistory')
+                        .map(loc => <button
+                            key={loc.key}
+                            className={locationState[loc.key] ? styles.locationCleared : styles.locationOpen}
+                            onClick={() => dispatch({ type: TOGGLE_LOCATION, payload: { location: loc.key }})}
+                        >{loc.title}</button>)}
+                    </div>  
                 </div>
-                <h3>Future</h3>
-                <div>
-                    {availableWInfo
-                    .filter(loc => loc.time === '2300')
-                    .map(loc => <button
-                        key={loc.key}
-                        className={locationState[loc.key] ? styles.locationCleared : styles.locationOpen}
-                        onClick={() => dispatch({ type: TOGGLE_LOCATION, payload: { location: loc.key }})}
-                    >{loc.title}</button>)}
+                <div className={styles.locationEra}>
+                    <h3>Future</h3>
+                    <div className={styles.locationButtonRow}>
+                        {availableWInfo
+                        .filter(loc => loc.time === '2300')
+                        .map(loc => <button
+                            key={loc.key}
+                            className={locationState[loc.key] ? styles.locationCleared : styles.locationOpen}
+                            onClick={() => dispatch({ type: TOGGLE_LOCATION, payload: { location: loc.key }})}
+                        >{loc.title}</button>)}
+                    </div>
                 </div>
-                <h3>End of Time</h3>
-                <div>
-                    {availableWInfo
-                    .filter(loc => loc.time === 'EoT')
-                    .map(loc => <button
-                        key={loc.key}
-                        className={locationState[loc.key] ? styles.locationCleared : styles.locationOpen}
-                        onClick={() => dispatch({ type: TOGGLE_LOCATION, payload: { location: loc.key }})}
-                    >{loc.title}</button>)}
+                <div className={styles.locationEra}>
+                    <h3>Dark Ages</h3>
+                    <div className={styles.locationButtonRow}>
+                        {availableWInfo
+                        .filter(loc => loc.time === 'dark')
+                        .map(loc => <button
+                            key={loc.key}
+                            className={locationState[loc.key] ? styles.locationCleared : styles.locationOpen}
+                            onClick={() => dispatch({ type: TOGGLE_LOCATION, payload: { location: loc.key }})}
+                        >{loc.title}</button>)}
+                    </div> 
+                </div>
+                <div className={styles.locationEra}>
+                    <h3>End of Time</h3>
+                    <div className={styles.locationButtonRow}>
+                        {availableWInfo
+                        .filter(loc => loc.time === 'EoT')
+                        .map(loc => <button
+                            key={loc.key}
+                            className={locationState[loc.key] ? styles.locationCleared : styles.locationOpen}
+                            onClick={() => dispatch({ type: TOGGLE_LOCATION, payload: { location: loc.key }})}
+                        >{loc.title}</button>)}
+                    </div>
                 </div>
                 {goMode && <p>Go Mode: {goMode}</p>}
             </div>
-        </>
+        </div>
     ) : null;
 }
 

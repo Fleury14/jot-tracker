@@ -29,7 +29,7 @@ const Characters = (props) => {
     return (
         <>
             <h2>Characters</h2>
-            <div>
+            <div className={styles.charRow}>
                 {renderCharacters(charState)}
             </div>
         </>

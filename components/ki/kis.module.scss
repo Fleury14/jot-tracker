@@ -1,7 +1,22 @@
 .noKI {
-    background-color: red;
+    background-color: #111;
 }
 
 .hasKI {
-    background-color: green;
+    background-color: #040;
+}
+
+.kiRow button {
+    margin: 5px;
+    width: 90px;
+    height: 45px;
+    font-size: 19px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    color: #eee;
+    transition: 0.3s all;
+}
+
+.kiRow h2 {
+    text-align: center;
 }
