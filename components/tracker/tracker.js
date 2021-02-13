@@ -6,10 +6,14 @@ import styles from './tracker.module.scss';
 
 const Tracker = (props) => {
     return (
-        <div className={styles.trackerContainer}>
-            <Characters />
-            <KIs />
-            <Locations />
+        <div className={styles.trackerWrapper}>
+            <div className={styles.trackerContainer}>
+                <Characters />
+                <KIs />
+            </div>
+            <div className={styles.trackerContainer}>
+                <Locations />
+            </div>
         </div>
     )
 }

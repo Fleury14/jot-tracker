@@ -100,7 +100,9 @@ const Locations = (props) => {
                         >{loc.title}</button>)}
                     </div>
                 </div>
-                {goMode && <p>Go Mode: {goMode}</p>}
+                <div className={styles.locationGoMode}>
+                    {goMode && <p>Go Mode: {goMode}</p>}
+                </div>
             </div>
         </div>
     ) : null;

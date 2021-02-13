@@ -13,7 +13,6 @@ const getKIName = (key) => {
 const renderKIs = (kiState) => {
     const kiList = [];
     const dispatch = useDispatch();
-    console.log('ki state', kiState);
     for (const key in kiState) {
         kiList.push(
             <button
