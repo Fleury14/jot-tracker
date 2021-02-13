@@ -30,7 +30,7 @@ const Locations = (props) => {
             <div className={styles.locationContainer}>
                 <div className={styles.locationEra}>
                     <h3>Middle Ages</h3>
-                    <div className={styles.locationButtonRow}>
+                    <div className={`${styles.locationButtonRow} ${styles.middleAges}`}>
                         {availableWInfo
                         .filter(loc => loc.time === '600')
                         .map(loc => <button
@@ -42,7 +42,7 @@ const Locations = (props) => {
                 </div>
                 <div className={styles.locationEra}>
                     <h3>Present</h3>
-                    <div className={styles.locationButtonRow}>
+                    <div className={`${styles.locationButtonRow} ${styles.present}`}>
                         {availableWInfo
                         .filter(loc => loc.time === '1000')
                         .map(loc => <button
@@ -54,7 +54,7 @@ const Locations = (props) => {
                 </div>
                 <div className={styles.locationEra}>
                     <h3>Prehistory</h3>
-                    <div className={styles.locationButtonRow}>
+                    <div className={`${styles.locationButtonRow} ${styles.prehistory}`}>
                         {availableWInfo
                         .filter(loc => loc.time === 'prehistory')
                         .map(loc => <button
@@ -66,7 +66,7 @@ const Locations = (props) => {
                 </div>
                 <div className={styles.locationEra}>
                     <h3>Future</h3>
-                    <div className={styles.locationButtonRow}>
+                    <div className={`${styles.locationButtonRow} ${styles.future}`}>
                         {availableWInfo
                         .filter(loc => loc.time === '2300')
                         .map(loc => <button
@@ -78,7 +78,7 @@ const Locations = (props) => {
                 </div>
                 <div className={styles.locationEra}>
                     <h3>Dark Ages</h3>
-                    <div className={styles.locationButtonRow}>
+                    <div className={`${styles.locationButtonRow} ${styles.darkAges}`}>
                         {availableWInfo
                         .filter(loc => loc.time === 'dark')
                         .map(loc => <button
@@ -90,7 +90,7 @@ const Locations = (props) => {
                 </div>
                 <div className={styles.locationEra}>
                     <h3>End of Time</h3>
-                    <div className={styles.locationButtonRow}>
+                    <div className={`${styles.locationButtonRow} ${styles.endOfTime}`}>
                         {availableWInfo
                         .filter(loc => loc.time === 'EoT')
                         .map(loc => <button
