@@ -117,7 +117,7 @@ const LocationInfo = {
     },
     mtWoe: {
         title: 'Mt. Woe [Giga Gaia]',
-        time: 'prehistory'
+        time: 'dark'
     },
     deathPeak: {
         title: 'Death Peak [Lavos Spawn]',
