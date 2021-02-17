@@ -82,7 +82,7 @@ export const availableLocations = () => {
     }
 
     // sun stone required both future and prehistory access and two KI
-    if (hasGateKey && hasPendant && pendantTrial && hasMoonStone && hasJerky) available.push('sunStone');
+    if (hasGateKey && hasPendant && pendantTrial && hasMoonStone) available.push('sunStone');
 
     return available
 
